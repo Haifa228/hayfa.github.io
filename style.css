@@ -1,0 +1,145 @@
+body{
+    margin:0;
+    padding:0;
+   
+
+}
+header{
+    background-color: rgb(158, 202, 241);
+    position:relative;
+    height: 80px;
+    top:0;
+
+
+}
+header>*{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    margin:0 30px ;
+    
+}
+header img {
+    width:50px;
+}
+header>ul{
+    right: 50px;;
+    text-decoration:auto;
+
+
+}
+header,
+header a{
+    color:white;
+
+
+}
+header a:nth-child(2){
+    font-size:20px;
+    font-weight:600;
+    margin-left:100px;
+
+
+}
+header>ul li{
+   
+    margin: 10px;
+    font-weight: 600;
+    display:inline-block;
+    list-style:none ;
+    transition:beckground-color 0.5s ease-in-out;
+}
+header>ul li:hover{
+   background-color: rgb(0, 0, 0.1);
+}
+.page-main{
+    display:block;
+    width:80%;
+    margin:auto;
+    margin-top:100px;
+}
+.bienvenue {
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    margin-bottom:100px;
+}
+.bienvenue>img {
+    width:500px;
+    align-self:center;
+    border-radius: 5px;
+}
+.bienvenue>.text{
+    width:500px;
+    margin-left: 20px;
+
+
+}
+.text p{
+    font-size: 20px;
+    text-align: justify ;
+   
+}
+.separator{
+    height:3px;
+    background-color:olivedrab ;
+    width: 100%;
+    margin:20px 0;
+
+}
+.title-category{
+    text-align: center ;
+}
+.a-propos{
+    margin-bottom: 100px%;
+}
+.picture-propos{
+    width:100%;
+    height:200px;
+    background-image: url("../img/team.jpg") ;
+    background-position: center;
+    background-size:cover ;
+    border-radius: 5px;
+    position: relative;
+
+}
+.info-picture-propos{
+    width:100% ;
+    height: 100%;
+    z-index: 2;
+    color: rgb(253, 253, 253);
+    background-image: linear-gradient(rgba(0, 0, 0),rgba(0, 0, 1));
+    border-radius: 5px;
+}
+.picture-propos-text{
+    position: absolute ;
+    bottom:0;
+    margin:10px;
+
+}
+.picture-propos-text p{
+    font-size:15px;
+    text-align: justify;
+
+}
+.picture-propos-text h3{
+    font-size:25px;
+
+}
+input:not(input[type="submit"]),textarea{
+    border:none;
+    border-bottom: 2px solid rosybrown;
+    resize:both;
+    outline:auto;
+    font-family: " Montserrat";
+    width:30vw;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+label{
+    margin-bottom: 10px;
+    font-weight:600 ;
+    font-size:20px;
+}
+
+

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Météo</title>
+    <script>
+        function getTemperature() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("temperature").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", "http://adresse-ip-esp32:port/temperature", true);
+            xhttp.send();
+        }
+
+        // Actualiser la température toutes les 10 secondes (10000 millisecondes)
+        setInterval(getTemperature, 10000);
+    </script>
+</head>
+<body>
+
+  <header>
+    <a href="/"><img src="img/logo.png " alt="logo"></a>
+    <ul>
+        <li><a href="#acceuil">Acceuil</a></li>
+        <li><a href="#a-propos">A propos</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+  </header>
+  <h1>ENIG Météo</h1>
+  <h2>température actuelle :</h2>
+  <p id="temperature">En attente de données...</p>
+  <div class="class-main">
+    <div class="bienvenue" id="acceuil">
+        <img src="img/bienvenue.jpg" alt="image de bienvenue">
+        <h1>Bienvenue!</h1>
+        <p>   Ce projet a pour but la conception d'un site-web du méteo <br>
+           qui a pour but l'affichage de la température<br>
+           mesurée instantanément a l'aide d'un capteur de tepérature.</p>
+    </div> 
+    <div class="separator"></div>
+    <div class="a-propos" id="a-propos">
+        <img src="img/team.jpg" alt="image de team">
+        <h2 class="title_category">A propos</h2>
+        <div class="picture-propos">
+            <div class="info-picture-propos">
+                <div class="picture-propos-text">
+                    <h3>Notre team</h3>
+                    <p>
+                              Chayma BEN AYED, Amenallah ZATTAL et Haifa JENDOUBI forment une équipe de développement web professionnelle<br> 
+                        hautement compétente. Leur collaboration harmonieuse allie la créativité de Chayma,<br>
+                        l'expertise technique approfondie d'Amenallah et la rigueur organisationnelle de Haifa.<br>
+                        Ensemble, ils créent des solutions web innovantes et robustes, <br>
+                        surpassant les attentes de leurs clients avec efficacité et professionnalisme.<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="separator"></div>
+    <div class="contact" id="contact">
+        <h2 class="title_category">Contact</h2>
+        <div class="form-contact-container">
+            <form action="" metothe="" class="form-contact">
+                <div class="form-top">
+                    <div class="form-left">
+                       </div><label for="Nom" >Nom</label>
+                          <input type="text" name="nom" placeholder="Votre nom">
+                       <div>
+                       <div><label for="Email" >Email</label>
+                          <input type="email" name="email" placeholder="nom.prenom@gmail.com">
+                       </div>
+
+                    </div>
+                    <div class="form-right">
+                       <label for="message" >Message</label>
+                       <texterea name="message" clos="30" rows="5" placeholder="Je vous contacte pour un ..."></texterea>
+                       
+                    
+
+                    </div>
+                 <div class="form-bottom">
+                    <input type="submit" name="envoyer" value="envoyer">
+                 </div>
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+    <div class="separator"></div>
+    <div class="commentaires" id="commentaires">
+        <h2 class="title-category">commentaires</h2>
+        <div class="commentaires">
+            <img src="img/user.png" class="commentaire.pp">
+            <div class="commentaire-text">
+                <h3 class="commentaire-nom" Jean Dupont></h3>
+                <p class="commentaire-message">
+                    commentaire commentaire commentaire .....
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</body>
+</html>
